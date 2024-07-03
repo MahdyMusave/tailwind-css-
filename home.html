@@ -11,17 +11,56 @@
 </head>
 <body>
 <!-- // popover-->
- <div class="flex justify-center items-center h-screen">
-    <div class="relative group inline-block ">
-        <button class="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105 ">
-            Hover Me
-        </button>
-        <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute w-48 mt-2 bg-white text-gray-800 border-gray-300 rounded-lg shadow-lg py-2 z-10">
-            <p class="px-4 py-2">this is a popover component</p>
-            <p class="px-4 py-2">you can customize it with your contact</p>
-        </div>
-     </div>
- </div>
+<div class="max-w-md mx-auto mt-8">
+    <ul class="border border-gray-400 rounded-md divide-y divide-gray-400">
+        <li>
+            <button class="flex items-center justify-between w-full p-4 focus:outline-none" type="button"
+                onclick="toggleAccordion(event)">
+                <span class="text-lg font-bold">Section 1</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 13.535l4.95-4.95 1.414 1.414-6.364 6.364-6.364-6.364 1.414-1.414z" />
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <button class="flex items-center justify-between w-full p-4 focus:outline-none" type="button"
+                onclick="toggleAccordion(event)">
+                <span class="text-lg font-bold">Section 2</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 13.535l4.95-4.95 1.414 1.414-6.364 6.364-6.364-6.364 1.414-1.414z" />
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4">
+                <p>Integer bibendum augue vel urna blandit tristique.</p>
+            </div>
+        </li>
+        <li>
+            <button class="flex items-center justify-between w-full p-4 focus:outline-none" type="button"
+                onclick="toggleAccordion(event)">
+                <span class="text-lg font-bold">Section 3</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 13.535l4.95-4.95 1.414 1.414-6.364 6.364-6.364-6.364 1.414-1.414z" />
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4">
+                <p>Nullam ut augue auctor, tristique neque quis, euismod velit.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function toggleAccordion(event) {
+        const button = event.target;
+        const content = button.nextElementSibling;
+        button.classList.toggle('active');
+        content.classList.toggle('hidden');
+        content.classList.toggle('flex');
+    }
+</script>
 
 </body>
 </html>
