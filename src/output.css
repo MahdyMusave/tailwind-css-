@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.relative {
+  position: relative;
+}
+
 .flex {
   display: flex;
 }
@@ -566,34 +570,14 @@ video {
   min-height: 100vh;
 }
 
-.w-max {
+.w-\[max-content\] {
   width: -moz-max-content;
   width: max-content;
 }
 
-@keyframes typing {
-  0% {
-    width: 0%;
-    visibility: hidden;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-
-  100% {
-    border-color: white;
-  }
-}
-
-.animate-typing {
-  animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .items-center {
@@ -643,6 +627,15 @@ video {
   padding-right: 1.25rem;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -655,5 +648,93 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:inset-0::before {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+@keyframes typewriter {
+  to {
+    content: var(--tw-content);
+    left: 100%;
+  }
+}
+
+.before\:animate-typewriter::before {
+  content: var(--tw-content);
+  animation: typewriter 2s steps(11) forwards;
+}
+
+.before\:bg-white::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:inset-0::after {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+.after\:w-\[0\.125em\]::after {
+  content: var(--tw-content);
+  width: 0.125em;
+}
+
+@keyframes typewriter {
+  to {
+    content: var(--tw-content);
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+
+  0.1% {
+    content: var(--tw-content);
+    opacity: 1;
+  }
+
+  50% {
+    content: var(--tw-content);
+    opacity: 1;
+  }
+
+  50.1% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+
+  100% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+}
+
+.after\:animate-caret::after {
+  content: var(--tw-content);
+  animation: typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s;
+}
+
+.after\:bg-black::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
