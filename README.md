@@ -1,4 +1,4 @@
 Mahdy musave
 
 Hello there, I am a fullstack web developer.
- today Typewriter effect  with Tailwind-css
+ today Sticky fullpage pages / slides  with Tailwind-css
